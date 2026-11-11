@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplos de elementos HTML y estructuras utilizadas en páginas web">
+    <title>Elementos web | El mundo del desarrollo web</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <a class="logo" href="index.html">MundoWeb</a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia de la web</a>
+            <a href="galeria.html">Tecnologías</a>
+            <a href="tecnicas.html" class="activo">Elementos web</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-contenido">
+                <p class="etiqueta">Aprende HTML</p>
+                <h1>Elementos que forman una página web</h1>
+                <p>
+                    HTML cuenta con etiquetas que permiten organizar el
+                    contenido y darle significado. Conocerlas es uno de
+                    los primeros pasos para desarrollar sitios web.
+                </p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2>Encabezados y párrafos</h2>
+            <p>
+                Los encabezados permiten dividir el contenido en secciones.
+                HTML ofrece seis niveles, desde <strong>h1</strong> hasta
+                <strong>h6</strong>. Se recomienda mantener un orden lógico
+                para que la información sea fácil de entender.
+            </p>
+
+            <h3>Ejemplo de un encabezado de tercer nivel</h3>
+            <p>
+                Los párrafos se escriben con la etiqueta
+                <strong>p</strong>. Para resaltar una palabra podemos usar
+                <strong>negritas</strong>, mientras que la etiqueta
+                <em>em</em> permite dar énfasis al texto, normalmente
+                mostrándolo en cursiva.
+            </p>
+
+            <h4>Un encabezado de cuarto nivel</h4>
+            <p>
+                También podemos agregar enlaces, imágenes, listas,
+                tablas y formularios para presentar información de
+                distintas maneras.
+            </p>
+        </section>
+
+        <section class="seccion seccion-destacada">
+            <h2>Listas en HTML</h2>
+
+            <h3>Lista desordenada</h3>
+            <p>Una lista desordenada se utiliza cuando el orden de los elementos no es importante.</p>
+
+            <ul class="lista">
+                <li>Diseño de interfaces.</li>
+                <li>Organización del contenido.</li>
+                <li>Programación de funciones.</li>
+                <li>Pruebas y mantenimiento.</li>
+            </ul>
+
+            <h3>Lista ordenada</h3>
+            <p>Una lista ordenada sirve para mostrar pasos que siguen una secuencia.</p>
+
+            <ol class="lista">
+                <li>Crear el archivo HTML.</li>
+                <li>Vincular la hoja de estilos CSS.</li>
+                <li>Agregar interactividad con JavaScript.</li>
+                <li>Probar el sitio en un navegador.</li>
+            </ol>
+        </section>
+
+        <section class="seccion">
+            <h2>Tabla de tecnologías web</h2>
+            <p>
+                La siguiente tabla resume la función de algunas tecnologías
+                utilizadas durante la creación de un sitio web.
+            </p>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Tecnología</th>
+                            <th scope="col">Función principal</th>
+                            <th scope="col">Ejemplo de uso</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Organizar el contenido</td>
+                            <td>Títulos y párrafos</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Definir la apariencia</td>
+                            <td>Colores y distribución</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Agregar interactividad</td>
+                            <td>Validar un formulario</td>
+                        </tr>
+                        <tr>
+                            <td>SQL</td>
+                            <td>Consultar información</td>
+                            <td>Buscar registros</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Resumen: cada tecnología cumple una función diferente y puede trabajar junto con las demás.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="seccion seccion-destacada">
+            <h2>Buenas prácticas</h2>
+
+            <h3>Recomendaciones al escribir HTML</h3>
+            <ul class="lista">
+                <li>Utilizar etiquetas de acuerdo con su propósito.</li>
+                <li>Escribir el código con una indentación ordenada.</li>
+                <li>Agregar textos alternativos a las imágenes.</li>
+                <li>Comprobar que los enlaces funcionen correctamente.</li>
+                <li>Separar el contenido HTML del diseño CSS.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>MundoWeb | Proyecto académico</p>
+        <p>Desarrollo de Aplicaciones Web · Ingeniería de Software · UADY</p>
+    </footer>
+</body>
+</html>

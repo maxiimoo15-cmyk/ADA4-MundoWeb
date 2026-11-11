@@ -1,0 +1,390 @@
+
+:root {
+    --fondo: #0b1120;
+    --fondo-secundario: #111c30;
+    --tarjeta: #17243a;
+    --texto: #e8eef8;
+    --texto-secundario: #a9b8ce;
+    --azul: #38bdf8;
+    --azul-oscuro: #0284c7;
+    --borde: #2a3b55;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 7%;
+    background-color: #080d18;
+    border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+    color: var(--azul);
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.menu a:hover,
+.menu a:focus-visible,
+.menu a.activo {
+    color: #ffffff;
+    background-color: var(--azul-oscuro);
+}
+
+
+.hero {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            #164e63 0,
+            transparent 35%
+        ),
+        linear-gradient(135deg, #111c30, #0b1120);
+}
+
+.hero-contenido {
+    max-width: 760px;
+}
+
+.etiqueta {
+    color: var(--azul);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-contenido > p:not(.etiqueta) {
+    color: var(--texto-secundario);
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--azul-oscuro);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 8px;
+    transition: background-color 0.25s, transform 0.25s;
+}
+
+.boton:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+}
+
+
+.seccion {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 55px 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 22px;
+    color: var(--azul);
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: 25px 0 12px;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+.seccion p {
+    color: var(--texto-secundario);
+}
+
+.seccion a:not(.boton) {
+    color: var(--azul);
+}
+
+.lista {
+    padding-left: 28px;
+    margin: 18px 0 25px;
+    color: var(--texto-secundario);
+}
+
+.lista li {
+    margin-bottom: 8px;
+}
+
+.seccion-destacada {
+    max-width: none;
+    padding-left: max(30px, calc((100% - 1090px) / 2));
+    padding-right: max(30px, calc((100% - 1090px) / 2));
+    background-color: var(--fondo-secundario);
+}
+
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 25px;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: var(--azul);
+}
+
+.tarjeta h3 {
+    color: var(--texto);
+    margin-top: 15px;
+}
+
+.tarjeta p {
+    margin-bottom: 0;
+}
+
+.icono-tecnologia {
+    display: inline-block;
+    background-color: #0c4a6e;
+    color: #bae6fd;
+    font-weight: bold;
+    padding: 7px 13px;
+    border-radius: 7px;
+}
+
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--tarjeta);
+}
+
+th,
+td {
+    padding: 13px 16px;
+    text-align: left;
+    border: 1px solid var(--borde);
+}
+
+th {
+    background-color: #164e63;
+    color: #ffffff;
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: var(--fondo-secundario);
+}
+
+.formulario {
+    max-width: 700px;
+    display: grid;
+    gap: 18px;
+}
+
+.grupo-campo {
+    display: grid;
+    gap: 7px;
+}
+
+.grupo-campo label,
+.etiqueta-grupo {
+    font-weight: bold;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background-color: var(--tarjeta);
+    color: var(--texto);
+    font: inherit;
+}
+
+.grupo-campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.grupo-opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.mensaje-error {
+    color: #fca5a5;
+    font-size: 0.9rem;
+}
+
+.mensaje-exito {
+    color: #86efac;
+    font-weight: bold;
+}
+
+
+.linea-tiempo {
+    border-left: 3px solid var(--azul-oscuro);
+    margin: 30px 0 30px 12px;
+    padding-left: 28px;
+}
+
+.evento {
+    position: relative;
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 22px;
+}
+
+.evento::before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 24px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--azul);
+    border-radius: 50%;
+}
+
+.evento h3 {
+    color: var(--azul);
+    margin: 0 0 8px;
+}
+
+.evento p {
+    margin: 0;
+}
+
+.pie {
+    padding: 28px 20px;
+    text-align: center;
+    border-top: 1px solid var(--borde);
+    background-color: #080d18;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+.pie p {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 5%;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 55px 7%;
+    }
+
+    .seccion {
+        padding: 40px 22px;
+    }
+}
+
+/* IMAGEN DE TECNOLOGÍAS */
+.imagen-tecnologias {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.imagen-tecnologias img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--borde);
+}
+
+.imagen-tecnologias figcaption {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-top: 12px;
+}

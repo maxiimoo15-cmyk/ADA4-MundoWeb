@@ -1,0 +1,8 @@
+# Evitar publicar credenciales de la base de datos
+includes/conexion.php
+
+# Evitar publicar respaldos de bases de datos
+database/*.sql
+database/*.sql.gz
+
+Add-Content .gitignore "consultar_mensajes.php"

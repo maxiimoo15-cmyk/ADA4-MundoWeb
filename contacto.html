@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto y comentarios sobre el desarrollo web">
+    <title>Contacto | El mundo del desarrollo web</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validacion.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <a class="logo" href="index.html">MundoWeb</a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia de la web</a>
+            <a href="galeria.html">Tecnologías</a>
+            <a href="tecnicas.html">Elementos web</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-contenido">
+                <p class="etiqueta">Queremos conocer tu opinión</p>
+                <h1>Contacto</h1>
+                <p>
+                    Comparte tus comentarios o dinos qué tema del desarrollo
+                    web te gustaría conocer mejor.
+                </p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2>Formulario de contacto</h2>
+
+            <p>
+                Completa los campos para probar el formulario.
+                Los datos se revisan en el navegador mediante JavaScript.
+            </p>
+
+            <form 
+                id="formulario-contacto" 
+                class="formulario" 
+                action="guardar_contacto.php"
+                method="POST"                
+                novalidate>
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                        required
+                        minlength="3"
+                        maxlength="80"
+                    >
+                    <span class="mensaje-error" id="error-nombre"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        required
+                    >
+                    <span class="mensaje-error" id="error-correo"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="tema">Tema de interés:</label>
+                    <select id="tema" name="tema" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="historia">Historia de la web</option>
+                        <option value="otro">Otro tema</option>
+                    </select>
+                    <span class="mensaje-error" id="error-tema"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mensaje">Comentario:</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Escribe tu comentario"
+                        required
+                        minlength="10"
+                        maxlength="500"
+                    ></textarea>
+                    <span class="mensaje-error" id="error-mensaje"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <span class="etiqueta-grupo">¿Recomendarías este sitio?</span>
+                    <div class="grupo-opciones">
+                        <label>
+                            <input type="radio" name="recomendacion" value="si" required>
+                            Sí
+                        </label>
+                        <label>
+                            <input type="radio" name="recomendacion" value="no">
+                            No
+                        </label>
+                    </div>
+                    <span class="mensaje-error" id="error-recomendacion"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>
+                        <input type="checkbox" id="acepto" name="acepto" required>
+                        Confirmo que revisé la información antes de enviar.
+                    </label>
+                    <span class="mensaje-error" id="error-acepto"></span>
+                </div>
+
+                <button class="boton" type="submit">
+                    Enviar comentario
+                </button>
+
+                <p id="resultado-formulario" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="seccion seccion-destacada">
+            <h2>Acerca de este proyecto</h2>
+            <p>
+                Este sitio fue creado como una actividad académica para
+                demostrar el uso de HTML, CSS y JavaScript en un sitio web
+                compuesto por varias páginas conectadas mediante enlaces.
+            </p>
+            <p>
+                Institución: <strong>Universidad Autónoma de Yucatán (UADY)</strong>.
+            </p>
+            <p>
+                Programa: <em>Ingeniería de Software</em>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>MundoWeb | Proyecto académico</p>
+        <p>Desarrollo de Aplicaciones Web · Ingeniería de Software · UADY</p>
+    </footer>
+</body>
+</html>
